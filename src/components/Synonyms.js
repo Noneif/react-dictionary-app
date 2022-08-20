@@ -3,7 +3,6 @@ import React from "react";
 import "./Synonyms.css";
 
 function Synonyms(props) {
-  console.log(props.synonym);
   if (props.synonym) {
     <ul className="Synonyms">
       <p>
