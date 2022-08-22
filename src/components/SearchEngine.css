@@ -1,4 +1,39 @@
+.SearchEngine .label {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #233142;
+}
+.SearchEngine .suggection {
+  font-size: 15px;
+  font-weight: 500;
+  color: #233142;
+}
+.SearchEngine form {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
 .SearchEngine input {
-  display: block;
-  margin: 20px auto;
+  font-size: 17px;
+  font-weight: bold;
+  color: #455d7a;
+  padding: 6px 8px;
+}
+
+.SearchEngine button {
+  border-color: #f8f9fa;
+  background: #f8f9fa;
+  border-style: none;
+  margin-left: 10px;
+  color: #455d7a;
+  transition: all 150ms ease-in-out;
+}
+
+.SearchEngine button:hover {
+  scale: 1.2;
+}
+
+.SearchEngine .fa-magnifying-glass {
+  font-size: 30px;
 }

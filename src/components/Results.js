@@ -9,14 +9,18 @@ function Results(props) {
   if (props.results) {
     return (
       <div className="Results">
-        <div className="word">{props.results[0].word}</div>
-        <Phonetics phonetics={props.results[0]} />
+        <section>
+          <div className="word">{props.results[0].word}</div>
+          <Phonetics phonetics={props.results[0]} />
+        </section>
         {props.results.map((results, index) => {
           return (
-            <div className="group-meaning" key={index}>
-              {index + 1})
-              <Meanings meanings={results} />
-            </div>
+            <section key={index}>
+              <div className="group-meaning">
+                {index + 1})
+                <Meanings meanings={results} />
+              </div>
+            </section>
           );
         })}
       </div>

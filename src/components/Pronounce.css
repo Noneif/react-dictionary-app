@@ -1,0 +1,13 @@
+.Pronounce {
+  display: inline;
+}
+.Pronounce .fa-music {
+  font-size: 25px;
+  color: #f95959;
+  margin-right: 10px;
+}
+
+.Pronounce .fa-music:hover {
+  color: #455d7a;
+  transition: all 150ms ease-in-out;
+}

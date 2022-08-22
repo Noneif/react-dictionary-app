@@ -1,0 +1,23 @@
+.Footer {
+  text-align: center;
+  color: #455d7a;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.Footer .footer-link {
+  text-decoration: none;
+  color: #f95959;
+}
+.Footer .footer-link:hover {
+  color: #455d7a;
+}
+.Footer .fa-github {
+  font-size: 25px;
+}
+
+@media (max-width: 768px) {
+  .Footer {
+    margin-top: 40px;
+  }
+}

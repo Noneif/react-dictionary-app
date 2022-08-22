@@ -8,8 +8,8 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <img src={logo} className="img-fluid shadow logo" alt="img" />
-      <SearchEngine />
+      <img src={logo} alt="" className="logo" />
+      <SearchEngine defaultKeyWord="hey" />
     </div>
   );
 }

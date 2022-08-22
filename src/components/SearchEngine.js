@@ -3,13 +3,15 @@ import axios from "axios";
 
 import Results from "./Results";
 import Photos from "./Photos";
+import Footer from "../Footer";
 
 import "./SearchEngine.css";
 
-function SearchEngine() {
-  const [keyword, setKeyword] = useState(null);
+function SearchEngine(props) {
+  const [keyword, setKeyword] = useState(props.defaultKeyWord);
   const [results, setResults] = useState(null);
   const [photos, setPhotos] = useState(null);
+  const [load, setLoad] = useState(false);
 
   function handleResponseDictionary(response) {
     setResults(response.data);
@@ -19,9 +21,7 @@ function SearchEngine() {
     setPhotos(response.data.photos);
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-
+  function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleResponseDictionary);
 
@@ -31,25 +31,53 @@ function SearchEngine() {
     axios.get(pexelsApiUrl, headers).then(handleResponsePhotos);
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    search();
+  }
+
+  function loaded() {
+    setLoad(true);
+    search();
+  }
+
   function handleTyping(event) {
     setKeyword(event.target.value);
   }
 
-  return (
-    <div className="SearchEngine">
-      <div className="container">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="search"
-            placeholder="type here..."
-            onChange={handleTyping}
-          />
-        </form>
-        <Results results={results} />
-        <Photos photos={photos} />
+  if (load) {
+    return (
+      <div className="SearchEngine">
+        <div className="container">
+          <section>
+            <div className="label">What word do you want to look up?</div>
+            <form onSubmit={handleSubmit}>
+              <input
+                className="form-control"
+                type="search"
+                placeholder="type here..."
+                defaultValue={props.defaultKeyWord}
+                onChange={handleTyping}
+              />
+              <button type="submit">
+                <i className="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+            <div className="suggection">
+              Suggested words: rainbow, wood, grace...
+            </div>
+          </section>
+          <Results results={results} />
+          <Photos photos={photos} />
+          <Footer />
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    loaded();
+    return "Loading...";
+  }
 }
 
 export default SearchEngine;

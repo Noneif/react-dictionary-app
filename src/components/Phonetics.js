@@ -1,20 +1,13 @@
 import React from "react";
 
+import Pronounce from "./Pronounce";
+
 import "./Phonetics.css";
 
 function Phonetics(props) {
-  let audio = new Audio(props.phonetics.phonetics[0].audio);
-
-  function start(event) {
-    event.preventDefault();
-    audio.play();
-  }
-
   return (
     <div className="Phonetics">
-      <a href="/" onClick={start}>
-        Click
-      </a>
+      <Pronounce pronounce={props.phonetics.phonetics[0].audio} />
       <span>{props.phonetics.phonetic}</span>
     </div>
   );

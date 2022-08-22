@@ -1,10 +1,11 @@
-.Results {
-  font-size: 25px;
+.Results .word {
+  font-size: 35px;
   font-weight: 900;
-  color: royalblue;
+  color: #455d7a;
 }
 
 .Results .group-meaning {
   font-size: 20px;
-  color: brown;
+  font-weight: bold;
+  color: #f95959;
 }

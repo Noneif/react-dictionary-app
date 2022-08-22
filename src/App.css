@@ -3,4 +3,12 @@
   width: 100px;
   display: block;
   margin: 0 auto;
+  border-radius: 50%;
+}
+
+section {
+  background: #f8f9fa;
+  margin: 20px 0;
+  padding: 20px 30px;
+  border-radius: 7px;
 }
