@@ -14,7 +14,7 @@ function Photos(props) {
                   <img
                     src={photos.src.landscape}
                     alt=""
-                    className="img-fluid rounded"
+                    className="img-fluid rounded shadow"
                   />
                 </a>
               </div>

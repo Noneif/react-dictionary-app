@@ -50,7 +50,7 @@ function SearchEngine(props) {
     return (
       <div className="SearchEngine">
         <div className="container">
-          <section>
+          <section className="shadow">
             <div className="label">What word do you want to look up?</div>
             <form onSubmit={handleSubmit}>
               <input

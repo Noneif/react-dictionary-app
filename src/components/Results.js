@@ -9,13 +9,13 @@ function Results(props) {
   if (props.results) {
     return (
       <div className="Results">
-        <section>
+        <section className="shadow">
           <div className="word">{props.results[0].word}</div>
           <Phonetics phonetics={props.results[0]} />
         </section>
         {props.results.map((results, index) => {
           return (
-            <section key={index}>
+            <section className="shadow" key={index}>
               <div className="group-meaning">
                 {index + 1})
                 <Meanings meanings={results} />
