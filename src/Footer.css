@@ -3,7 +3,7 @@
   color: #455d7a;
   font-size: 20px;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .Footer .footer-link {
   text-decoration: none;
@@ -14,10 +14,4 @@
 }
 .Footer .fa-github {
   font-size: 25px;
-}
-
-@media (max-width: 768px) {
-  .Footer {
-    margin-top: 40px;
-  }
 }
