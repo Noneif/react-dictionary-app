@@ -4,3 +4,6 @@
   color: #233142;
   margin-bottom: 0;
 }
+.Definitions li::marker {
+  font-weight: 700;
+}
