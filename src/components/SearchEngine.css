@@ -26,6 +26,7 @@
   background: #f8f9fa;
   border-style: none;
   margin-left: 10px;
+  padding: 0;
   color: #455d7a;
   transition: all 150ms ease-in-out;
 }
