@@ -8,7 +8,7 @@ function Synonyms(props) {
       <ul className="Synonyms">
         <strong>Synonyms:</strong>
         {props.synonym.map((synonym, index) => {
-          return <li key={index}>{synonym},</li>;
+          return <li key={index}>{synonym}</li>;
         })}
       </ul>
     );

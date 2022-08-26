@@ -1,5 +1,4 @@
 .Synonyms strong {
-  padding-right: 10px;
   font-size: 17px;
   font-weight: bold;
   color: #6643b5;
@@ -15,6 +14,9 @@
   font-size: 17px;
   font-weight: 500;
   color: #233142;
+  background: #e9ecef;
   display: inline-block;
-  padding-right: 10px;
+  padding: 3px 10px;
+  margin: 5px 6px;
+  border-radius: 7px;
 }
